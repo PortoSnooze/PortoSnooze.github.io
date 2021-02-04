@@ -1,0 +1,15 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+post_sidebar:
+  - title: "TEST"
+    image: http://placehold.it/350x250
+    image_alt: "image"
+    text: "blah blah blah"  
+    children:
+      - title: "blah di blah"
