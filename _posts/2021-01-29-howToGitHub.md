@@ -15,7 +15,7 @@ As king of procrastination, wasting time creating a blog I don't even have recen
 
 After some very superficial Googling I decided that [GitHub Pages][ghPages] and [Jekyll][Jekyll] were the way forward, and I liked the look of the [Minimal Mistakes][jekyllMM] theme, so thought I'd use that too. Easy. I mean, I'd never even heard of GitHub Pages, Jekyll _or_ Minimal Mistakes, and I'm pretty hopeless with computers in general, but several ‘how to’ blogs claimed it was simple and fast to set up, so on I forged. 
 
-After hours of wildly jumping around websites, randomly downloading shit I didn't understand and tying myself in knots, I've learned that's wise to read what's required _before_ starting (I recently read that things are only difficult if you first imagined they'd be easy).
+After hours of wildly jumping around websites, randomly downloading shit I didn't understand and tying myself in knots, I've learned that's wise to read what's required _before_ starting (I recently read that something is only difficult if you first imagined it would be easy).
 
 My gift to computer-unsavvy humanity is this basic Windows how-to guide, to try and save some other poor souls from my fate.
 
