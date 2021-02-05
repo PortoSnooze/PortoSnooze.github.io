@@ -3,10 +3,10 @@ layout: single
 toc: true
 toc_icon: 'bookmark'
 title:  "Beginner's guide to GitHub Pages with Jekyll and Minimal Mistakes"
-tags: jekyll minimal-mistakes blog github-page 
+tags: jekyll minimal-mistakes website github-page 
 comments: true
 ---
-**A basic (like, really basic) guide to creating a blog using GitHub Pages, Jekyll, and Minimal Mistakes**
+**A basic (like, really basic) guide to creating a website using GitHub Pages, Jekyll, and Minimal Mistakes**
 
 
 ## Introduction
@@ -69,13 +69,13 @@ should return the version of jekyll you've installed. If there are any problems 
 
 Ah, familiar territory! Simply install [Visual Studio Code][VSC] (**VSC**) and go through the usual windows install process (wizard?? Do we still say that?)
 
-## Step 3: Create a Jekyll blog<a name="st3"></a>
+## Step 3: Create a Jekyll website<a name="st3"></a>
 
 Here I should credit Arya Murali's ["Guide to github and Jekyll"][20-pc], which leaned on heavily for Steps 3 and 6.
 
-After following these steps you'll have a very basic blog that you can run locally (that just means you can view it privately on your browser). If you want to know how to add your page to GitHub and make it public, go to [Step 6](#st6) after following the instructions here. 
+After following these steps you'll have a very basic website that you can run locally (that just means you can view it privately on your browser). If you want to know how to add your page to GitHub and make it public, go to [Step 6](#st6) after following the instructions here. 
 
-First, start a command prompt with Ruby and navigate to the folder you want your blog to be stored.
+First, start a command prompt with Ruby and navigate to the folder you want your website to be stored.
 
 {: .notice--success}
 >
@@ -88,13 +88,13 @@ A _**very**_ basic guide on how to move around a windows filing system:
 * `cd` +  tab scrolls through the folders available to move to
 {: .notice--success}
 
-Create an empty jekyll blog in your desired folder by typing: 
+Create an empty jekyll website in your desired folder by typing: 
 
 {% highlight ruby %}
-jekyll new <blog name> 
+jekyll new <website name> 
 {% endhighlight %}
 
-(replacing 'blog name' with your blog name - with no spaces). Changing into your blog's directory and typing `dir` will list the files and folders created. These files contain everything needed to write and publish your blog.
+(replacing 'website name' with your website name - with no spaces). Changing into your website's directory and typing `dir` will list the files and folders created. These files contain everything needed to write and publish your page.
 
 To see what's what, open the folder containing your files in VSC (File > Open Folder).
 
@@ -104,17 +104,17 @@ Before you change anything, open a terminal window in VSC (Terminal > New Termin
 bundle exec jekyll serve
 {% endhighlight %}
 
-This allows you to see the default blog created by Jekyll on your browser ([http://127.0.0.1:4000][local]).
+This allows you to see the default website created by Jekyll on your browser ([http://127.0.0.1:4000][local]).
 
 | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
 
-|**NOTE** | You can change the order of the next steps, depending on what excites you. If you want to know how to create blog content go to [Step 4](#st4), if you want to see how the blog is published publicly via GitHub Pages go to [Step 5](#st5), and if you're more interested in getting Minimal Mistakes to work with your blog go to [Step 6](#st6).
+|**NOTE** | You can change the order of the next steps, depending on what excites you. If you want to know how to create content go to [Step 4](#st4), if you want to see how the website is published publicly via GitHub Pages go to [Step 5](#st5), and if you're more interested in getting Minimal Mistakes to work with your website go to [Step 6](#st6).
 
-## Step 4: Personalise your blog<a name="st4"></a>
+## Step 4: Personalise your website<a name="st4"></a>
 
 Here I'll briefly explain what the most important files and folders do. 
 
-`_posts`:  This folder is very straightforward - it contains your blog posts! Jekyll provides you with a default post so you can get to grips with how they work, but there are a few notable points:
+`_posts`:  This folder is very straightforward - it contains your website's posts! Jekyll provides you with a default post so you can get to grips with how they work, but there are a few notable points:
 
 **1)** Posts are named with the date in YYY-MM-DD at the start. *THIS IS IMPORTANT*. Your posts won't publish if you use a different naming convention. 
 
@@ -122,17 +122,17 @@ Here I'll briefly explain what the most important files and folders do.
 
 **3)** The text in between the three dashes at the start of the post is called YAML (ain't markup language). This is where you'd put information like the title of your posts, and sets the layout of the webpage (more on that in a bit).
 
-`_site`: All you need to know about this is not to mess with it! The files in here compile your blog but it's done automatically.
+`_site`: All you need to know about this is not to mess with it! The files in here compile your website but it's done automatically.
 
-`_config.yml`: This file contains information such as your blog's name and the layout used. You can personalise your blog by changing name, description etc etc. Two things to note: 1) you won't have your blog URL yet unless you've been through [Step 6](#st6); 2) this file will be replaced if you want to run Minimal Mistakes (or you'll have to modify it to run MM), so if you make extensive changes, keep a copy somewhere so you remember what you did.  
+`_config.yml`: This file contains information such as your website's name and the layout used. You can personalise your page by changing name, description etc etc. Two things to note: 1) you won't have your website URL yet unless you've been through [Step 6](#st6); 2) this file will be replaced if you want to run Minimal Mistakes (or you'll have to modify it to run MM), so if you make extensive changes, keep a copy somewhere so you remember what you did.  
 
 | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
 
-|**NOTE** | If you're running your blog on a local server, changes to most files can be viewed by saving the change and refreshing the web page. However, if you make changes to _config.yml you must exit by pressing Ctrl+c and re-run `bundle exec jekyll serve` see the changes made  
+|**NOTE** | If you're running your website on a local server, changes to most files can be viewed by saving the change and refreshing the web page. However, if you make changes to _config.yml you must exit by pressing Ctrl+c and re-run `bundle exec jekyll serve` see the changes made  
 
 `gemfile`: Used for describing Ruby gem dependencies (a dependency is a program that's required to run another program - for example GitHub Pages has a Ruby gem to set up and sync Jekyll environment with GitHub Pages)
 
-`_data`:<a name="_dataExp"></a> This contains a file called `navigation.yml`. I got really frustrated at one point trying to figure out how to add an 'about' page to my blog and I realised this is the place to do it (see screenshot below).
+`_data`:<a name="_dataExp"></a> This contains a file called `navigation.yml`. I got really frustrated at one point trying to figure out how to add an 'about' page to my website and I realised this is the place to do it (see screenshot below).
 
 ![](../assets/img/nav.png) 
 
@@ -150,7 +150,7 @@ The Minimal Mistakes [quick guide][mmGuide] is very good if you follow it proper
 
 I finally managed to piece together what I was missing using [Web Work Tools' Minimal Mistakes & Jekyll Setup and Configuration][webWorkTools] so I've put what I did here. 
 
-First, clone the minimal mistakes repo into a folder (I placed it one-up from my Jekyll blog created in [Step 3](#st3)):
+First, clone the minimal mistakes repo into a folder (I placed it one-up from my Jekyll website created in [Step 3](#st3)):
 
 {% highlight ruby %}
 git clone https://github.com/mmistakes/minimal-mistakes.git
@@ -164,7 +164,7 @@ In the Minimal Mistakes folder copy the following files across (**NOTE**, this w
 Of course, you may not want to start your `_congig.yml` file from scratch! If this is the case then copy the .html files from the `_layouts` folder, and change your `_config.yml` and `gem` files, making sure your gems are included in the `_config.yml` page. It might take some fiddling to get things running - I found it easier to do it this way to see how it all works.
 {: .notice--warning}
 
-Now, in your blog folder, replace the contents of your gemfile with the following
+Now, in your website folder, replace the contents of your gemfile with the following
 
 ![](../assets/img/gemfile.png)
 
@@ -180,15 +180,15 @@ You should now have a default version of Minimal Mistakes installed (run `bundle
 
 To make changes and personalise it, we need to amend some of the files we read about in [Step 4](#st4) (don't worry if you skipped straight to this step, I go through the important points here). 
 
-As mentioned in [Step 4](#st4) the `_config.yml` file contains information such as your blog's name, your name etc. You can personalise your blog by changing name, description _etc._ towards the top of the document. 
+As mentioned in [Step 4](#st4) the `_config.yml` file contains information such as your website's name, your name etc. You can personalise your website by changing name, description _etc._ towards the top of the document. 
 
 ![](../assets/img/2021-02-02-13-07-43.png)
 
 In addition to adding personal details here, uncomment `remote_theme: "mmistakes/minimal-mistakes"`
 
-There are loads of things you can do with Minimal Mistakes that I've barely started to look into, so you'll have to read up and experiment to make your blog look sleek. 
+There are loads of things you can do with Minimal Mistakes that I've barely started to look into, so you'll have to read up and experiment to make your page look sleek. 
 
-If you'd like to add an 'about' page to your blog, MM has a useful guide to [working with pages][mmPagesGuide]. The guide is straightforward, but where he mentions [front matter defaults][jekyllFrontMatterDefaults] in step 3, he's referring to the `_config.yml` file. The defaults section is toward the end of the document and should look like this if you want to add pages, in addition to posts:
+If you'd like to add an 'about' page to your website, MM has a useful guide to [working with pages][mmPagesGuide]. The guide is straightforward, but where he mentions [front matter defaults][jekyllFrontMatterDefaults] in step 3, he's referring to the `_config.yml` file. The defaults section is toward the end of the document and should look like this if you want to add pages, in addition to posts:
 
 ![](../assets/img/2021-02-02-13-13-19.png)
 
@@ -206,7 +206,7 @@ Keep the repo as 'public' (you need it to be public so you can see it yourself, 
 
 You'll be taken to a scary looking 'quick setup' page but just ignore that for now.
 
-Go back to your blog folder in VSC and add your blog's URL in `_config.yml` under site settings (see screenshot below)
+Go back to your website's folder in VSC and add your website's URL in `_config.yml` under site settings (see screenshot below)
 
 ![](../assets/img/configWebpageName.png)
 
@@ -269,7 +269,7 @@ git add .
 
 (The `.` after add just tells git you want to add all files in the current directory)
 
-Next we want to 'commit' the snapshot of the files we added in the previous step - these can be considered as backups, which will allow you to recover to a previous version of your blog if needed. 
+Next we want to 'commit' the snapshot of the files we added in the previous step - these can be considered as backups, which will allow you to recover to a previous version of your website if needed. 
 
 {% highlight ruby %}
 git commit -m "initial commit"
@@ -305,7 +305,7 @@ If you go to your GitHub repo you should see all of the files listed in your com
 
 ![](../assets/img/2021-02-02-11-50-09.png)
 
-Click 'settings' and scroll down to GitHub Pages if you're confused as to what your blog's URL is:
+Click 'settings' and scroll down to GitHub Pages if you're confused as to what your website's URL is:
 
 ![](../assets/img/2021-02-02-11-51-29.png)
 
