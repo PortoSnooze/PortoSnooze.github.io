@@ -4,6 +4,7 @@ toc: true
 toc_icon: 'bookmark'
 title:  "Beginner's guide to GitHub Pages with Jekyll and Minimal Mistakes"
 tags: jekyll minimal-mistakes blog github-page 
+comments: true
 ---
 **A basic (like, really basic) guide to creating a blog using GitHub Pages, Jekyll, and Minimal Mistakes**
 
