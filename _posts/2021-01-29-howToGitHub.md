@@ -1,12 +1,8 @@
 ---
-layout: single
-toc: true
-toc_icon: 'bookmark'
 title:  "Beginner's guide to GitHub Pages with Jekyll and Minimal Mistakes"
 tags: jekyll minimal-mistakes website github-page 
-comments: true
 ---
-**A basic (like, really basic) guide to creating a website using GitHub Pages, Jekyll, and Minimal Mistakes**
+**A basic guide to creating a website using GitHub Pages, Jekyll, and Minimal Mistakes**
 
 
 ## Introduction
@@ -94,7 +90,7 @@ Create an empty jekyll website in your desired folder by typing:
 jekyll new <website name> 
 {% endhighlight %}
 
-(replacing 'website name' with your website name - with no spaces). Changing into your website's directory and typing `dir` will list the files and folders created. These files contain everything needed to write and publish your page.
+(replacing 'website name' with your website name - with no spaces). Changing into your website's directory and typing `dir` will list the files and folders created. These files contain everything needed to edit and publish your page.
 
 To see what's what, open the folder containing your files in VSC (File > Open Folder).
 
@@ -108,7 +104,7 @@ This allows you to see the default website created by Jekyll on your browser ([h
 
 | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
 
-|**NOTE** | You can change the order of the next steps, depending on what excites you. If you want to know how to create content go to [Step 4](#st4), if you want to see how the website is published publicly via GitHub Pages go to [Step 5](#st5), and if you're more interested in getting Minimal Mistakes to work with your website go to [Step 6](#st6).
+|**NOTE** | You can change the order of the next steps, depending on what excites you. If you want to know how to create content go to [Step 4](#st4), if you want to see how the website is published publicly via GitHub Pages go to [Step 5](#st5), or if you're more interested in getting Minimal Mistakes to work with your website go to [Step 6](#st6).
 
 ## Step 4: Personalise your website<a name="st4"></a>
 
@@ -120,11 +116,11 @@ Here I'll briefly explain what the most important files and folders do.
 
 **2)** Posts are written in markdown language (this is what the .md extension means). I've included some quick-start links at the end of this section if you're not familiar with markdown.
 
-**3)** The text in between the three dashes at the start of the post is called YAML (ain't markup language). This is where you'd put information like the title of your posts, and sets the layout of the webpage (more on that in a bit).
+**3)** The text in between the three dashes at the start of the post is called YAML (ain't markup language). This is where you'd put information like the title of your posts, and sets the layout of the webpage. To save you adding the layout to every post, you can set a default in the `_config.yml` file. I briefly touch on [this](#yaml_config) in Step 5. 
 
 `_site`: All you need to know about this is not to mess with it! The files in here compile your website but it's done automatically.
 
-`_config.yml`: This file contains information such as your website's name and the layout used. You can personalise your page by changing name, description etc etc. Two things to note: 1) you won't have your website URL yet unless you've been through [Step 6](#st6); 2) this file will be replaced if you want to run Minimal Mistakes (or you'll have to modify it to run MM), so if you make extensive changes, keep a copy somewhere so you remember what you did.  
+`_config.yml`: This file contains information such as your website's name and the layout used. You can personalise your page by changing name, description etc etc. Two things to note: 1) you won't have your website URL yet unless you've been through [Step 6](#st6); 2) this file will be replaced if you want to run Minimal Mistakes (or you'll have to modify it to run MM), so if you make extensive changes, keep a copy somewhere so you remember what you did.    
 
 | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 
 
@@ -180,13 +176,15 @@ You should now have a default version of Minimal Mistakes installed (run `bundle
 
 To make changes and personalise it, we need to amend some of the files we read about in [Step 4](#st4) (don't worry if you skipped straight to this step, I go through the important points here). 
 
-As mentioned in [Step 4](#st4) the `_config.yml` file contains information such as your website's name, your name etc. You can personalise your website by changing name, description _etc._ towards the top of the document. 
+As mentioned in Step 4 the `_config.yml` file contains information such as your website's name, your name etc. You can personalise your website by changing name, description _etc._ towards the top of the document. 
 
 ![](../assets/img/2021-02-02-13-07-43.png)
 
 In addition to adding personal details here, uncomment `remote_theme: "mmistakes/minimal-mistakes"`
 
 There are loads of things you can do with Minimal Mistakes that I've barely started to look into, so you'll have to read up and experiment to make your page look sleek. 
+
+<a name="yaml_config"></a>As I mentioned earlier, you can save yourself from specifying the layout for each post by adding a default to `_config.yml`. This is demonstrated in the MM `_config.yml` towards the end, under the `defaults` section (`layout: single` tells Jekyll to use the `layout.html` included with the theme).
 
 If you'd like to add an 'about' page to your website, MM has a useful guide to [working with pages][mmPagesGuide]. The guide is straightforward, but where he mentions [front matter defaults][jekyllFrontMatterDefaults] in step 3, he's referring to the `_config.yml` file. The defaults section is toward the end of the document and should look like this if you want to add pages, in addition to posts:
 
